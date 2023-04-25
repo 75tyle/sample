@@ -39,3 +39,54 @@ var day = /** @class */ (function () {
 }());
 var c = new day;
 c.test1();
+var users = {
+    name: 'shangy',
+    age: 10,
+    address: 'sdfghjk',
+    getName: function () {
+        return 'mangal';
+    }
+};
+users.age = 18;
+console.log(users);
+console.log(users.getName());
+//union types
+var s = 'hello';
+s = 30;
+s = true;
+s = 'dhangy';
+console.log(s);
+// functions
+// #1
+function cal() {
+    return 10 + 20;
+}
+console.log(cal());
+// #2
+function cals(a) {
+    return a;
+}
+console.log(cals('wow'));
+// #3
+function calc() {
+    return 100;
+}
+console.log();
+// #4         optional parameter
+function calt(j, k) {
+    return k ? j + k : j;
+}
+console.log(calt(100));
+// class in typescirpt
+var dot = /** @class */ (function () {
+    function dot(name) {
+        this.name = 'mangal';
+        this.name = name;
+    }
+    dot.prototype.get_name = function () {
+        return this.name;
+    };
+    return dot;
+}());
+var d1 = new dot('shangy');
+console.log(d1.get_name());
