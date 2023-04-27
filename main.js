@@ -127,3 +127,35 @@ var child = /** @class */ (function (_super) {
 var c1 = new child();
 c1.set_n('peter');
 console.log(c1.get_n());
+//  Generics
+function user_(detail) {
+    return detail;
+}
+console.log(user_({ name: 'sanga', age: 50 }).name);
+// enum
+var Days;
+(function (Days) {
+    Days["sun"] = "sun";
+    Days["mon"] = "mon";
+    Days["tue"] = "tue";
+    Days["wed"] = "wed";
+    Days["thu"] = "thu";
+    Days["fri"] = "fri";
+    Days["sat"] = "sat";
+})(Days || (Days = {}));
+function whichday(day) {
+    return 'today is ' + day;
+}
+console.log(Days.tue);
+// Symbol
+var grt_sym;
+var demo = /** @class */ (function () {
+    function demo() {
+    }
+    demo.prototype[grt_sym] = function () {
+        return 'some data with symbol';
+    };
+    return demo;
+}());
+var s1 = new demo;
+console.log(s1[grt_sym]());

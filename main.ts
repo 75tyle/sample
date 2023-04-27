@@ -125,4 +125,33 @@ console.log(d1.get_name())
  c1.set_n('peter')
  console.log(c1.get_n())
 
- 
+//  Generics
+
+function user_ <T>(detail:T):T
+{
+  return detail
+}
+console.log(user_({name:'sanga',age:50}).name)
+
+// enum
+enum Days{
+    sun='sun',mon='mon',tue='tue',wed='wed',thu='thu',fri='fri',sat='sat'
+}
+
+function whichday(day:Days)
+{
+  return 'today is '+day
+}
+console.log(Days.tue)
+
+// Symbol
+
+let grt_sym:any
+
+class demo{
+    [grt_sym](){
+        return 'some data with symbol'
+    }
+}
+let s1 =new demo
+console.log(s1[grt_sym]())
