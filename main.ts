@@ -106,3 +106,23 @@ class dot{
 }
 let d1 = new dot('shangy')
 console.log(d1.get_name())
+
+// inhertiance
+ class parent{
+  name:string
+  set_n(name):void
+  {
+    this.name=name
+  }
+ }
+ class child extends parent{ 
+   get_n():string
+   {
+    return this.name
+   }
+ }
+ let c1 = new child()
+ c1.set_n('peter')
+ console.log(c1.get_n())
+
+ 
